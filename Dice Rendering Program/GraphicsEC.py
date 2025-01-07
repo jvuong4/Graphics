@@ -1,8 +1,3 @@
-'''
-Use the up, down, left, and right arrows to help rotate the dice
-Use the number keys 1-5 to change the displayed dice
-'''
-
 import pygame
 from pygame.locals import *
 
