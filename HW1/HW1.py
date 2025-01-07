@@ -1,10 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-COSC 4370 Homework #1
-This is the starter code for the first homework assignment.
-It should run as is and will serve as the starting point for development.
-"""
 import math
 import pygame
 from pygame.locals import *
@@ -13,7 +6,7 @@ from OpenGL.GLU import *
 
 
 def Cube():
-    d = 1.0/math.sqrt(3)  # This is the default but is too large and needs to be changed
+    d = 1.0/math.sqrt(3) 
     verticies = (
         (d, -d, -d),
         (d, d, -d),
@@ -49,7 +42,7 @@ def Tetrahedron():
         (0,1), (0,2), (0,3),
         (1,2), (1,3), (2,3)
         )
-    glColor(1,1,1) # Draw the cube in white
+    glColor(1,1,1) # Draw in white
     glBegin(GL_LINES)
     for edge in edges:
         for vertex in edge:
@@ -72,7 +65,7 @@ def Octahedron():
         (1,2), (1,3), (1,4), (1,5),
         (2,4), (2,5), (3,4), (3,5)
         )
-    glColor(1,1,1) # Draw the cube in white
+    glColor(1,1,1) # Draw in white
     glBegin(GL_LINES)
     for edge in edges:
         for vertex in edge:
@@ -112,7 +105,7 @@ def Dodecahedron():
         (6,10),(6,14),(6,19),(7,8),(7,14),(7,18),
         (8,9),(10,11),(12,14),(13,15),(16,17),(18,19)
         )
-    glColor(1,1,1) # Draw the cube in white
+    glColor(1,1,1) # Draw in white
     glBegin(GL_LINES)
     for edge in edges:
         for vertex in edge:
