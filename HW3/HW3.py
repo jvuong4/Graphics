@@ -6,8 +6,6 @@ from OpenGL.GLU import *
 
 import math
 
-
-
 forced = False
 
 d = 1 / math.sqrt(3)
@@ -84,7 +82,6 @@ def Dodecahedron(vx,vy,vz,texture):
         for vertex_index,vertex in enumerate(surface):
             glTexCoord2fv(texture[surface_index][vertex_index])
             glVertex3fv(vertices_d12[vertex])
-    
     glEnd()
     
     glBegin(GL_LINES)
