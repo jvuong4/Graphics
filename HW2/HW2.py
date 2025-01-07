@@ -1,8 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-COSC 4370 Homework #2
-"""
 import math
 import pygame
 from pygame.locals import *
@@ -70,7 +65,6 @@ class Moon:
         glLoadIdentity()
         glOrtho(-20, 20, -20, 20, -20, 20)
         
-        #this is a mess...
         #first match the angle that the model is tilted
         glRotated(a, 1, 0, 0)
         #try to find out where the planet is
@@ -92,14 +86,12 @@ class Moon:
         
     def render(self,t):
         glPushMatrix()
-        #glLoadIdentity()
-        
         glRotated(self.planet_speed * t, 0, 0, 1)
         glTranslated(self.planet_radius,0,0)
         glRotated(self.speed * t, 0, 0, 1)
         glTranslated(self.orb_radius,0,0)
         
-        glColor(self.color[0],self.color[1],self.color[2]) # Draw the cube in white
+        glColor(self.color[0],self.color[1],self.color[2])
         gluSphere(self.sphere, self.radius, 16, 16)
         
         glPopMatrix()
